@@ -1,0 +1,34 @@
+Started by user Ajaj Mujawar
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/SCRIPT_PIPELINE
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Create Directory)
+[Pipeline] sh
++ mkdir -p /home/jenkins/script
+[Pipeline] sh
++ ls -ltr
+total 4
+-rw-r--r-- 1 jenkins jenkins 42 Oct 25 00:07 mkdir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Create Script)
+[Pipeline] sh
++ echo #!/bin/bash -p /home/jenkins/script/FPIPE
+[Pipeline] sh
++ echo echo This is My First Pipeline as a Script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (RUN Script)
+[Pipeline] sh
++ bash /home/jenkins/script/FPIPE
+This is My First Pipeline as a Script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
