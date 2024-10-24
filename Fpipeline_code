@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Create Directory') {
+            steps {
+             
+                sh "mkdir -p  /home/jenkins/script"
+                sh "ls -ltr"
+            
+            }
+        }
+        stage ('Create Script'){
+            steps {
+                sh "echo '#!/bin/bash' > mkdir -p  /home/jenkins/script/FPIPE"
+                sh "echo 'echo This is My First Pipeline as a Script' >> /home/jenkins/script/FPIPE"
+            }
+        }
+        stage ('RUN Script') {
+            steps {
+                sh "bash /home/jenkins/script/FPIPE"
+            }
+        }
+        
+    }
+}
